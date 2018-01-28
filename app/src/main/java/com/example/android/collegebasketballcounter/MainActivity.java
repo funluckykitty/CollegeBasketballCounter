@@ -101,18 +101,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     public void btnClickSetTeamA(View v) {
         TextView displayTeamAName = (TextView) findViewById(R.id.tv_team_a_name);
         EditText editTeamAName = (EditText) findViewById(R.id.edit_text_team_a_name);
         displayTeamAName.setText(editTeamAName.getText().toString());
-        displayTeamAName.setTextSize(48);
+        displayTeamAName.setTextSize(32);
 
         View btnA = findViewById(R.id.btn_set_team_a_name);
         btnA.setVisibility(View.GONE);
         editTeamAName.setVisibility(View.GONE);
-
-
 
 
     }
@@ -121,11 +118,31 @@ public class MainActivity extends AppCompatActivity {
         TextView displayTeamBName = (TextView) findViewById(R.id.tv_team_b_name);
         EditText editTeamBName = (EditText) findViewById(R.id.edit_text_team_b_name);
         displayTeamBName.setText(editTeamBName.getText().toString());
-        displayTeamBName.setTextSize(48);
+        displayTeamBName.setTextSize(32);
 
         View btnB = findViewById(R.id.btn_set_team_b_name);
         btnB.setVisibility(View.GONE);
         editTeamBName.setVisibility(View.GONE);
+    }
+
+
+    public void btnClickFixTeamA(View v) {
+       // TextView fixTeamA = (TextView) findViewById(R.id.fix_text_team_a_name);
+       // int theFixA = Integer.parseInt(fixTeamA.getText().toString());
+       // scoreTeamA = scoreTeamA - theFixA;
+        scoreTeamA = scoreTeamA - 1;
+        displayForTeamA(scoreTeamA);
+       // fixTeamA.setText("");
+    }
+
+
+    public void btnClickFixTeamB(View v) {
+      //  TextView fixTeamB = (TextView) findViewById(R.id.fix_text_team_b_name);
+      //  int theFixB = Integer.parseInt(fixTeamB.getText().toString());
+      //   scoreTeamB = scoreTeamB - theFixB;
+        scoreTeamB = scoreTeamB - 1;
+        displayForTeamB(scoreTeamB);
+       // fixTeamB.setText("");
     }
 
 
